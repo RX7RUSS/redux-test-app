@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ListOfUsers from './components/ListOfUsers';
 
-class App extends Component {
-  render() {
+const users = [
+  { name: 'jerry', job: 'comedian' },
+  { name: 'george', job: 'architecht'},
+  { name: 'elaine', job: 'JP assistant'},
+  { name: 'kramer', job: 'trust-funder'},
+]
+
+
+const App = (props) => {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Redux Practice App</h2>
+          <ListOfUsers
+            users={users}
+          />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
-  }
 }
 
 export default App;
